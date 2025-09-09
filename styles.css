@@ -1,0 +1,113 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #059669;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tree-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tree-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.banner-bg {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
+}
+
+.leaf-decoration {
+  position: absolute;
+  opacity: 0.8;
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.leaf-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-image: url('./assets/hero-leaf1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+  z-index: 1;
+}
+
+.leaf-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-image: url('./assets/hero-leaf2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  z-index: 1;
+}
+
+.content-center {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .leaf-left,
+  .leaf-right {
+    width: 150px;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .leaf-left,
+  .leaf-right {
+    width: 100px;
+    opacity: 0.5;
+  }
+}
